@@ -1,0 +1,19 @@
+{
+    "name": "juanl/slim-poc",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Juanl\\SlimPoc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan Ramirez"
+        }
+    ],
+    "require": {
+        "guzzlehttp/psr7": "^2",
+        "slim/slim": "4.*"
+    }
+}
