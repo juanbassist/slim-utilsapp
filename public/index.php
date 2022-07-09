@@ -19,6 +19,7 @@ $app->get('/api', function (Request $req, Response $res, $args) {
     return $res
               ->withHeader('Content-Type', 'application/json')
               ->withStatus(200);
+              
 });
 
 $app->get('/jsontoxml', function (Request $req, Response $res, $args) {
