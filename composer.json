@@ -1,10 +1,11 @@
 {
+    "version": "1.0.0",
     "name": "juanl/slim-poc",
     "type": "project",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Juanl\\SlimPoc\\": "src/"
+            "Juanl\\SlimUtilsapp\\": "src/"
         }
     },
     "authors": [

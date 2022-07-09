@@ -1,0 +1,8 @@
+@endpoint = {{$dotenv endpoint}}
+@jsonDataUrl = {{$dotenv jsonDataUrl}}
+
+###
+GET {{endpoint}}/api
+
+### 
+GET {{endpoint}}/jsontoxml?jsonDataUrl={{jsonDataUrl}}

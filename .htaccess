@@ -1,13 +1,19 @@
-Options +SymLinksIfOwnerMatch
-RewriteEngine On
+Options All -Indexes
 
-# Allow Installatron requests
-# RewriteCond %{REQUEST_FILENAME} deleteme\.\w+\.php
-# RewriteRule (.*) - [L] 
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
 
-# RewriteRule ^ index.php [L]
+<IfModule mod_rewrite.c>
+  # Redirect to the public folder
+  RewriteEngine On
+  # RewriteBase /
+  RewriteRule ^$ public/ [L]
+  RewriteRule (.*) public/$1 [L]
 
-RewriteCond %{HTTP_HOST} ^utilsapp01.online$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.utilsapp01.online$
-RewriteCond %{REQUEST_URI} !public/
-RewriteRule (.*) /public/$1 [L]
+  # Redirect to HTTPS
+  # RewriteEngine On
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
